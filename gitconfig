@@ -1,0 +1,30 @@
+[user]
+	email = nedko.stefanov.nedkov@gmail.com
+	name = Nedko Stefanov Nedkov
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 0x0+0+0
+	file-view-hpane-position = 466
+	file-view-vpane-position = 804
+	main-window-view = HistoryView
+	show-graph = true
+	history-view-vpane-position = 549
+
+[alias]
+        kp = log --graph --decorate  --pretty=oneline --abbrev-commit 
+	kl = log --graph --decorate --abbrev-commit
+	k = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative 
+	g = grep -n
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	grep = auto
+[core]
+	editor = vim
+
+[merge]
+	tool = meld
+
+[credential]
+	helper = cache
