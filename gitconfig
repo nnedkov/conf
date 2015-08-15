@@ -1,6 +1,7 @@
 [user]
-	email = nedko.stefanov.nedkov@gmail.com
 	name = Nedko Stefanov Nedkov
+	email = nedko.stefanov.nedkov@gmail.com
+
 [giggle]
 	main-window-maximized = true
 	main-window-geometry = 0x0+0+0
@@ -11,20 +12,25 @@
 	history-view-vpane-position = 549
 
 [alias]
-        kp = log --graph --decorate  --pretty=oneline --abbrev-commit 
+	kp = log --graph --decorate  --pretty=oneline --abbrev-commit
 	kl = log --graph --decorate --abbrev-commit
-	k = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative 
+	k = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	g = grep -n
+
 [color]
 	diff = auto
 	status = auto
 	branch = auto
 	grep = auto
+
 [core]
 	editor = vim
+	safecrlf = false
 
 [merge]
 	tool = meld
 
 [credential]
 	helper = cache
+
