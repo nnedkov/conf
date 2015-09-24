@@ -15,6 +15,7 @@ fi
 PS1="\[\e[31;1m\]\u@\[\e[33;1m\]\h:\[\e[34;1m\]\w\$(git branch 2>/dev/null | grep -e '\* ' | sed 's/^..\(.*\)/(\1)/')> \[\e[0m\]"
 
 # aliases
+alias grep='grep --color=auto'
 alias sshtum='ssh nedkov@lxhalle.informatik.tu-muenchen.de'
 alias mypubip='curl icanhazip.com'
 alias myprivips=$'/sbin/ifconfig | awk \'/inet addr/ { print substr($2,6) }\' | awk \'{ if (NR == 1) print "eth0", $1; else print "wlan0", $1 }\''
