@@ -4,21 +4,19 @@
 
 
 # extend PATH environment variable
-export PATH=$PATH:~/Applications
+export PATH=$PATH:~/bin
 
 
 # global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+    . /etc/bashrc
 fi
 
 PS1="\[\e[31;1m\]\u@\[\e[33;1m\]\h:\[\e[34;1m\]\w\$(git branch 2>/dev/null | grep -e '\* ' | sed 's/^..\(.*\)/(\1)/')> \[\e[0m\]"
 
 # aliases
 alias grep='grep --color=auto'
-alias sshtum='ssh nedkov@lxhalle.informatik.tu-muenchen.de'
 alias mypubip='curl icanhazip.com'
-alias myprivips=$'/sbin/ifconfig | awk \'/inet addr/ { print substr($2,6) }\' | awk \'{ if (NR == 1) print "eth0", $1; else print "wlan0", $1 }\''
 alias gitaddmod=$'for i in `git status | awk \'/modified:/ { print $2 }\'`; do git add $i; done'
 # TOADD:  (ls | xargs -n1 -P32 -iF mv F ../results) >& ../results-mv.log   # move in parallel
 # git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
@@ -35,3 +33,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
+source <(kubectl completion bash)
